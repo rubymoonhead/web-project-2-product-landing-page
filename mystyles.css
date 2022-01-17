@@ -1,0 +1,360 @@
+* {
+	/* Outline to view layout on screen while styling | Remove after styling */
+	/* 	outline: 0.0625rem dashed #ff0075; */
+
+	/* include rules for specific web page below this line */
+	margin: 0;
+	padding: 0;
+	scroll-behavior: smooth;
+}
+
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+/* FONTS */
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+
+/* COLOR THEME */
+/* #444444 Tundora (dark gray)
+	#F6F6F6 Wild Sand (very light gray)
+	#FDB827 My Sin (medium golden yellow)
+	#7F7C82 Jumbo (medium gray)
+	#000000 Black (obviously) */
+
+body {
+	font-family: "Work Sans", sans-serif;
+	color: #000;
+	background-color: #f6f6f6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: "Montserrat", sans-serif;
+}
+
+/* Header */
+/* Navigation Bar */
+.hero {
+	display: flex;
+}
+.hero a {
+	text-decoration: none;
+	color: #444;
+}
+.hero a:hover {
+	color: #fdb827;
+}
+.logo a {
+	display: flex;
+	align-items: center;
+	text-decoration: none;
+	font-size: 1.875em;
+	cursor: pointer;
+	margin-left: 1.75em;
+}
+.logo-icon {
+	width: 1.5em;
+}
+.logo-name {
+	color: #444;
+	font-size: 1.5rem;
+	margin-left: 0.25em;
+}
+.logo-name:hover {
+	color: #fdb827;
+}
+.navbar {
+	display: flex;
+	position: fixed;
+	width: 100%;
+	max-width: 90em;
+	padding-top: 0.25em;
+	padding-bottom: 0.25em;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #f6f6f6;
+	z-index: 2;
+}
+.navbar ul {
+	display: flex;
+	list-style: none;
+}
+.navbar ul li {
+	display: block;
+}
+.navbar ul li a {
+	color: #444;
+	text-decoration: none;
+	letter-spacing: 0.125em;
+	display: block;
+	padding: 0.25em 1em;
+	transition: 0.2s ease;
+}
+ul li:hover a {
+	background: #fdb827;
+	color: #f6f6f6;
+}
+
+/* Home */
+.page {
+	position: relative;
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+}
+.page .text {
+	position: relative;
+	z-index: 1;
+	font-size: 1.75rem;
+	color: #f6f6f6;
+}
+.feel {
+	padding-top: 0.25em;
+	padding-bottom: 0.5em;
+}
+.page .image {
+	position: absolute;
+	background: url(https://c4.wallpaperflare.com/wallpaper/534/808/26/cat-kitten-family-kiss-two-gray-and-black-coated-cats-wallpaper-preview.jpg);
+	width: 100%;
+	height: 100%;
+	transform: scaleX(-1);
+	background-position: center;
+	background-size: cover;
+	filter: brightness(50%);
+}
+
+/* Features | How it works | Fresh food | On board | More Info */
+.part {
+	position: relative;
+	min-height: 100vh;
+	padding: 1em 0;
+	width: 100%;
+}
+.part h2 {
+	font-size: 2.5rem;
+	margin: 1em 1em;
+	position: relative;
+}
+.part:nth-child(odd) {
+	background: #7f7c82;
+	color: #f6f6f6;
+}
+.part:nth-child(3) {
+	background: #fdb827;
+	color: #444;
+}
+
+/* Features */
+.features {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	padding: 1em;
+}
+#features {
+	min-height: 25vh;
+}
+.card {
+	flex-basis: 20%;
+	text-align: center;
+	padding: 1em;
+	min-width: 10em;
+}
+.card img {
+	width: 4em;
+	margin-bottom: 1em;
+}
+.card h4 {
+	margin-bottom: 1em;
+}
+.card p {
+	padding: 0.5em;
+}
+
+/* How it works */
+.how {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.how-card {
+	flex-basis: 20%;
+	text-align: center;
+	padding: 3em;
+	border-radius: 0.25em;
+	min-width: 10em;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+	margin-bottom: 1.25em;
+}
+.how-card img {
+	width: 3em;
+	margin-bottom: 1em;
+}
+.how-card h3 {
+	margin-bottom: 1em;
+}
+#how-it-works {
+	min-height: 50vh;
+}
+
+/* Fresh food */
+#video {
+	display: block;
+	margin: 1.5em auto;
+}
+.meal {
+	font-size: 1.75rem;
+	margin: 0.5em 3em;
+	text-align: justify;
+}
+.product-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+}
+.product-container .product {
+	flex-basis: 30%;
+	text-align: center;
+	color: #444;
+	min-width: 15em;
+	padding: 2em;
+	margin-bottom: 1em;
+}
+.product img {
+	width: 8em;
+	margin-bottom: 1em;
+}
+.product h3 {
+	font-size: 2rem;
+}
+.product .food {
+	font-size: 1.25rem;
+	padding: 1em;
+}
+.btn {
+	font-size: 1.25rem;
+	color: #444;
+	background-color: #fdb827;
+	text-decoration: none;
+	padding: 0.5em 0.75em;
+	border-radius: 0.25em;
+	display: inline-block;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+	background-color: #444;
+	color: #f6f6f6;
+}
+
+/* On board */
+.on-board {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.get {
+	font-size: 2rem;
+	color: #fdb827;
+	margin-top: 1em;
+}
+input[type="email"] {
+	max-width: 20em;
+	width: 100%;
+	padding: 0.75em;
+	border-radius: 0.25em;
+	margin-bottom: 1.5em;
+}
+input[type="submit"] {
+	margin-bottom: 1.25em;
+}
+.button {
+	font-weight: 900;
+	color: #444;
+	background-color: #fdb827;
+	text-decoration: none;
+	padding: 0.75em 3em;
+	border-radius: 2em;
+	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+}
+.button:hover {
+	background-color: #444;
+	color: #f6f6f6;
+}
+#on-board {
+	min-height: 50vh;
+}
+
+/* More Info */
+#more-info {
+	min-height: 25vh;
+	color: #444;
+}
+.more-info-part {
+	display: flex;
+	justify-content: space-evenly;
+	width: 100%;
+}
+.more-info {
+	flex: 1 1 auto;
+	padding: 1em;
+	line-height: 2em;
+}
+.more-info p {
+	font-size: 0.9rem;
+}
+.more-info a {
+	text-decoration: none;
+	color: #444;
+}
+#support i {
+	padding-right: 0.5em;
+}
+.social {
+	display: flex;
+}
+.social i {
+	font-size: 1.25rem;
+	padding-right: 2em;
+}
+.copyright {
+	display: flex;
+	justify-content: flex-end;
+	margin-right: 1.25em;
+	margin-bottom: 1em;
+}
+.left-pad {
+	padding-left: 2em;
+}
+
+/* Footer */
+footer {
+	background-color: #444;
+	padding: 0.75em;
+	color: #f6f6f6;
+	text-align: center;
+	font-size: 0.75rem;
+}
+
+@media screen and (min-width: 1440px) {
+	body {
+		width: 100%;
+		max-width: 90em;
+		margin: 0 auto;
+	}
+}
