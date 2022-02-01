@@ -1,38 +1,30 @@
+/* MY TEMPLATE */
+/* CSS Reset */
 * {
 	/* Outline to view layout on screen while styling | Remove after styling */
-	/* 	outline: 0.0625rem dashed #ff0075; */
-
-	/* include rules for specific web page below this line */
+	outline: 0.0625em dashed #ff0075;
 	margin: 0;
 	padding: 0;
 	scroll-behavior: smooth;
 }
 
-html {
-	box-sizing: border-box;
-	font-size: 100%;
-}
 *,
 *:before,
 *:after {
 	box-sizing: inherit;
 }
 
-/* FONTS */
-@import url("https://fonts.googleapis.com/css2?family=Work+Sans:wght@300&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@900&display=swap");
+html {
+	box-sizing: border-box;
+	font-size: 100%;
+}
 
-/* COLOR THEME */
-/* #444444 Tundora (dark gray)
-	#F6F6F6 Wild Sand (very light gray)
-	#FDB827 My Sin (medium golden yellow)
-	#7F7C82 Jumbo (medium gray)
-	#000000 Black (obviously) */
+li {
+	list-style: none;
+}
 
-body {
-	font-family: "Work Sans", sans-serif;
-	color: #000;
-	background-color: #f6f6f6;
+a {
+	text-decoration: none;
 }
 
 h1,
@@ -44,22 +36,38 @@ h6 {
 	font-family: "Montserrat", sans-serif;
 }
 
+/* declaring variables for colors */
+:root {
+	--dark-gray: #444;
+	--very-light-gray: #f6f6f6;
+	--medium-golden-yellow: #fdb827;
+	--medium-gray: #7f7c82;
+	--black: #000;
+}
+
+/* body */
+body {
+	font-family: "Work Sans", sans-serif;
+	color: var(--black);
+	background-color: var(--very-light-gray);
+}
+
 /* Header */
 /* Navigation Bar */
+/* hero */
 .hero {
 	display: flex;
 }
 .hero a {
-	text-decoration: none;
-	color: #444;
+	color: var(--dark-gray);
 }
 .hero a:hover {
-	color: #fdb827;
+	color: var(--medium-golden-yellow);
 }
+/* logo */
 .logo a {
 	display: flex;
 	align-items: center;
-	text-decoration: none;
 	font-size: 1.875em;
 	cursor: pointer;
 	margin-left: 1.75em;
@@ -68,12 +76,12 @@ h6 {
 	width: 1.5em;
 }
 .logo-name {
-	color: #444;
+	color: var(--dark-gray);
 	font-size: 1.5rem;
 	margin-left: 0.25em;
 }
 .logo-name:hover {
-	color: #fdb827;
+	color: var(--medium-golden-yellow);
 }
 .navbar {
 	display: flex;
@@ -84,27 +92,25 @@ h6 {
 	padding-bottom: 0.25em;
 	justify-content: space-between;
 	align-items: center;
-	background-color: #f6f6f6;
+	background-color: var(--very-light-gray);
 	z-index: 2;
 }
 .navbar ul {
 	display: flex;
-	list-style: none;
 }
 .navbar ul li {
 	display: block;
 }
 .navbar ul li a {
-	color: #444;
-	text-decoration: none;
+	color: var(--dark-gray);
 	letter-spacing: 0.125em;
 	display: block;
 	padding: 0.25em 1em;
 	transition: 0.2s ease;
 }
 ul li:hover a {
-	background: #fdb827;
-	color: #f6f6f6;
+	background: var(--medium-golden-yellow);
+	color: var(--very-light-gray);
 }
 
 /* Home */
@@ -120,7 +126,7 @@ ul li:hover a {
 	position: relative;
 	z-index: 1;
 	font-size: 1.75rem;
-	color: #f6f6f6;
+	color: var(--very-light-gray);
 }
 .feel {
 	padding-top: 0.25em;
@@ -150,12 +156,12 @@ ul li:hover a {
 	position: relative;
 }
 .part:nth-child(odd) {
-	background: #7f7c82;
-	color: #f6f6f6;
+	background: var(--medium-gray);
+	color: var(--very-light-gray);
 }
 .part:nth-child(3) {
-	background: #fdb827;
-	color: #444;
+	background: var(--medium-golden-yellow);
+	color: var(--dark-gray);
 }
 
 /* Features */
@@ -229,7 +235,7 @@ ul li:hover a {
 .product-container .product {
 	flex-basis: 30%;
 	text-align: center;
-	color: #444;
+	color: var(--dark-gray);
 	min-width: 15em;
 	padding: 2em;
 	margin-bottom: 1em;
@@ -247,17 +253,16 @@ ul li:hover a {
 }
 .btn {
 	font-size: 1.25rem;
-	color: #444;
-	background-color: #fdb827;
-	text-decoration: none;
+	color: var(--dark-gray);
+	background-color: var(--medium-golden-yellow);
 	padding: 0.5em 0.75em;
 	border-radius: 0.25em;
 	display: inline-block;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
 .btn:hover {
-	background-color: #444;
-	color: #f6f6f6;
+	background-color: var(--dark-gray);
+	color: var(--very-light-gray);
 }
 
 /* On board */
@@ -270,7 +275,7 @@ ul li:hover a {
 }
 .get {
 	font-size: 2rem;
-	color: #fdb827;
+	color: var(--medium-golden-yellow);
 	margin-top: 1em;
 }
 input[type="email"] {
@@ -285,16 +290,15 @@ input[type="submit"] {
 }
 .button {
 	font-weight: 900;
-	color: #444;
-	background-color: #fdb827;
-	text-decoration: none;
+	color: var(--dark-gray);
+	background-color: var(--medium-golden-yellow);
 	padding: 0.75em 3em;
 	border-radius: 2em;
 	box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
 }
 .button:hover {
-	background-color: #444;
-	color: #f6f6f6;
+	background-color: var(--dark-gray);
+	color: var(--very-light-gray);
 }
 #on-board {
 	min-height: 50vh;
@@ -303,7 +307,7 @@ input[type="submit"] {
 /* More Info */
 #more-info {
 	min-height: 25vh;
-	color: #444;
+	color: var(--dark-gray);
 }
 .more-info-part {
 	display: flex;
@@ -319,8 +323,7 @@ input[type="submit"] {
 	font-size: 0.9rem;
 }
 .more-info a {
-	text-decoration: none;
-	color: #444;
+	color: var(--dark-gray);
 }
 #support i {
 	padding-right: 0.5em;
@@ -344,9 +347,9 @@ input[type="submit"] {
 
 /* Footer */
 footer {
-	background-color: #444;
+	background-color: var(--dark-gray);
 	padding: 0.75em;
-	color: #f6f6f6;
+	color: var(--very-light-gray);
 	text-align: center;
 	font-size: 0.75rem;
 }
